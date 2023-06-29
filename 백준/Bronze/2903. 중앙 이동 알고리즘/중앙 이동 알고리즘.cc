@@ -15,7 +15,7 @@ int main(int argc, char *argv[])
  
 	x *= x;
  
-	cout << x << endl;
+	cout << x << "\n";
  
 	return 0;
 }
