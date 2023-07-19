@@ -3,6 +3,7 @@
 using namespace std; 
 
 string s;
+int cnt[26];
 int main() {
 	ios_base::sync_with_stdio(false);
 	cin.tie(NULL);
@@ -10,15 +11,8 @@ int main() {
 
 	cin >> s;
 
-	
-	for (int i = 'a'; i <= 'z'; i++) {
-		int cnt = 0;
-		for (int j = 0; j < s.length(); j++) {
-			char c = s[j];
-			if (c == i) cnt++;
-		}
-		cout << cnt << " ";
-	}
+	for (char a : s) cnt[a - 'a']++;
+	for (int i : cnt) cout << i << " ";
 
 	return 0;
 }
