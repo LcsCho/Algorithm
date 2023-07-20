@@ -23,9 +23,7 @@ int main() {
 			char c = str[i];
 			rotStr[i] = c;
 		}
+		cout << rotStr[i];
 	}
-
-	for (int i = 0; i < str.length(); i++) cout << rotStr[i];
-
 	return 0;
 }
