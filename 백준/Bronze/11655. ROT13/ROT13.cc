@@ -9,21 +9,14 @@ int main() {
 	cout.tie(NULL);
 
 	getline(cin, str);
-	string rotStr[str.length()];
-	for (int i = 0; i < str.length(); i++) {
+	for (int i = 0; i < str.size(); i++) {
 		if ((str[i] >= 'a' && str[i] <= 'm') || (str[i] >= 'A' && str[i] <= 'M')) {
-			char cPlus = str[i] + 13;
-			rotStr[i] = cPlus;
+			str[i] = str[i] + 13;
 		}
 		else if ((str[i] >= 'n' && str[i] <= 'z') || (str[i] >= 'N' && str[i] <= 'Z')) {
-			char cMinus =  str[i] - 13;
-			rotStr[i] = cMinus;
+			str[i] = str[i] - 13;
 		}
-		else {
-			char c = str[i];
-			rotStr[i] = c;
-		}
-		cout << rotStr[i];
+		cout << str[i];
 	}
 	return 0;
 }
