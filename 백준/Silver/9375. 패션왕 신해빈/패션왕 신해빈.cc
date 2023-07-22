@@ -4,9 +4,6 @@ using namespace std;
 
 int t, n;
 string a, b;
-
-using namespace std;
-
 int main() {
     cin >> t;
 
