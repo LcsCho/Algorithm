@@ -1,27 +1,27 @@
 #include<bits/stdc++.h>
-
 using namespace std; 
-
 const int max_n = 104; 
 int dy[4] = {-1, 0, 1, 0};
 int dx[4] = {0, 1, 0, -1}; 
-int n, m, a[max_n][max_n], visited[max_n][max_n], y, x;
+int n, m, a[max_n][max_n], visited[max_n][max_n], y, x; 
 
-// 큰돌님 코드 참조
-int main(){ 
-    scanf("%d %d", &n, &m); 
+int main() { 
+    cin >> n >> m; 
     for(int i = 0; i < n; i++){
         for(int j = 0; j < m; j++){
-            scanf("%1d", &a[i][j]);
+            char c;
+            cin >> c;
+            a[i][j] = c - '0';
         }
     } 
-    
+
     queue<pair<int, int>> q;  
     visited[0][0] = 1;
     q.push({0, 0});  
-    
-    while(q.size()){
-        tie(y, x) = q.front(); q.pop(); 
+
+    while(!q.empty()) {
+        tie(y, x) = q.front(); 
+        q.pop(); 
         for(int i = 0; i < 4; i++){
             int ny = y + dy[i]; 
             int nx = x + dx[i]; 
@@ -31,6 +31,7 @@ int main(){
             q.push({ny, nx}); 
         } 
     }
-    printf("%d", visited[n - 1][m - 1]); 
+
+    cout << visited[n - 1][m - 1]; 
     return 0;
-}  
+}
