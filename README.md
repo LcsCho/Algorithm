@@ -1,2 +1,1 @@
-# Algorithm
-Baekjoon & Programmers Coding Test
+#Coding Test Log
